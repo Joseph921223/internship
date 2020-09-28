@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+
+  outline: none;
+  text-align: left;
+  
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Documentation</h2>
+<p style="text-align:center">Employee Monitoring System AC Documentation</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'introduction')" id="defaultOpen">Introduction</button>
+  <button class="tablinks" onclick="openCity(event, 'Overview')">System Overview</button>
+  <button class="tablinks" onclick="openCity(event, 'Architecture')">System Architecture</button>
+</div>
+
+<div id="introduction" class="tabcontent">
+  <h3>Introduction</h3>
+  <p>This document is intended to give clear views of the employee monitoring system.
+Highlighting the architectures, design process, user interaction of both hardware and
+software part, this document directs the user on the usage of the system and how it
+can best be used to get accurate results from it.</p>
+</div>
+
+<div id="Overview" class="tabcontent">
+  <h3>System Overview</h3>
+  <p>
+This system test if employees are active enough to start working on that particular day, it
+also uses an android application to activate the sensors to read in given time, the
+user/controller control the system from the android application.</p>
+<head>Hardware system</head>
+<p>This system will be built with the wooded container for constant temperature control
+since wood don’t trap temperature like metal do, it will consist of 3 slots, Temperature
+sensor slot, pulse reading slot and alcohol level measuring slot.</p>
+<p>
+<ul>
+<li>Heartbeat sensor - For the heartbeat sensor will use the pulse reader to sense the pulse in the
+finger. It will be in the deeper most part of the container to reduce light
+interference to it</li>
+<li>Temperature sensor - Temperature sensor will be used to measure temperature from the finger but also
+flexible enough to be put to measure it in the mouth.</li>
+<li>Alcohol sensor - It will be covered with an inner plastic cover for easy and direct breath capture
+All the system components will have indicator lights to give status, red for when
+reading and green for done</li>
+</ul>
+</p>
+</div>
+
+<div id="Architecture" class="tabcontent">
+  <h3>System Architecture</h3>
+  <p>With the on-going growth of technology, more and more machineries are introduced into
+manufacturing industries. Machineries faster and even sharper for the benefit of the
+company, looking at profit side of it. Some of these machineries use technology more
+advanced like artificial intelligence but some of these machines still need human operations,
+which then introduce human errors. Human error both caused by human limitations andPage 7 of 12
+reckless behavior which include operation these machines under the influence of alcohol
+and forcing your body and mind to focus even when not fit, in cases of illness. As the results
+of these human errors more and more injuries on duty are reported.</p>
+<p>This system is designed to bridge that gap by ensuring that only employee who are mentally
+and physically fit are the one set to operate those sensitive machineries on daily bases. This
+system will test for alcohol level in the body, heartbeat rate and body temperature. Based on
+the collective results obtained from the system, the employer will know which individuals are
+fit and focused to operate these machines thus human errors out of recklessness will be
+reduced. This system is the solution because most companies don’t have such system and
+have to relay of the sign they can spot from employees by sight, or maybe by smell of
+alcohol in close contact, but then using this system accurate results will be produced.</p> 
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
